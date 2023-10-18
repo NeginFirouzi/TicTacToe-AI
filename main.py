@@ -133,6 +133,14 @@ class TicTacToe:
         print()
         self.show_board()
 
-size= int(input())
+while True:
+    try:
+        size = int(input("Input size of board:"))
+        if size < 1:
+            raise ValueError("Size must be a positive integer.")
+        break
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+
 tic_tac_toe = TicTacToe(size)
 tic_tac_toe.start()
