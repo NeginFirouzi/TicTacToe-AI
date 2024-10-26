@@ -49,7 +49,7 @@ class TicTacToe:
             print(f"Now is Player {player}'s turn")
             while True:
                 try:
-                    row, col = map(int, input("Enter row and column numbers (1-based, e.g., 1 4) to fix spot: ").split())
+                    row, col = map(int, input("Enter row and column numbers (1-based, e.g., 1 3) to fix spot: ").split())
                     self.fix_spot(row - 1, col - 1, player)
                     break
                 except ValueError as e:
